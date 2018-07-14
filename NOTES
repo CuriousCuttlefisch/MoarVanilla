@@ -1,114 +1,62 @@
-#STAIRS AND SLABS FOR:
-andesite
-clay
-coarse_dirt
-white_concrete
-orange_concrete
-magenta_concrete
-light_blue_concrete
-yellow_concrete
-lime_concrete
-pink_concrete
-gray_concrete
-light_gray_concrete
-cyan_concrete
-purple_concrete
-blue_concrete
-brown_concrete
-green_concrete
-red_concrete
-black_concrete
-cracked_stone_bricks
-dark_prismarine
-diorite
-dirt
-end_stone
-end_stone_bricks
-glass
-white_glazed_terracotta
-orange_glazed_terracotta
-magenta_glazed_terracotta
-light_blue_glazed_terracotta
-yellow_glazed_terracotta
-lime_glazed_terracotta
-pink_glazed_terracotta
-gray_glazed_terracotta
-light_gray_glazed_terracotta
-cyan_glazed_terracotta
-purple_glazed_terracotta
-blue_glazed_terracotta
-brown_glazed_terracotta
-green_glazed_terracotta
-red_glazed_terracotta
-black_glazed_terracotta
-glowstone
-granite
-grass
-grass_path
-magma_block
-mossy_cobblestone
-mossy_stone_bricks
-mycelium
-netherrack
-nether_bricks
-obsidian
-packed_ice
-podzol
-polished_andesite
-polished_diorite
-polished_granite
-prismarine
-prismarine_bricks
-red_nether_bricks
-smooth_stone
-snow_block
-soul_sand
-white_stained_glass
-orange_stained_glass
-magenta_stained_glass
-light_blue_stained_glass
-yellow_stained_glass
-lime_stained_glass
-pink_stained_glass
-gray_stained_glass
-light_gray_stained_glass
-cyan_stained_glass
-purple_stained_glass
-blue_stained_glass
-brown_stained_glass
-green_stained_glass
-red_stained_glass
-black_stained_glass
-white_stained_terracotta
-orange_stained_terracotta
-magenta_stained_terracotta
-light_blue_stained_terracotta
-yellow_stained_terracotta
-lime_stained_terracotta
-pink_stained_terracotta
-gray_stained_terracotta
-light_gray_stained_terracotta
-cyan_stained_terracotta
-purple_stained_terracotta
-blue_stained_terracotta
-brown_stained_terracotta
-green_stained_terracotta
-red_stained_terracotta
-black_stained_terracotta
-terracotta
-white_wool
-orange_wool
-magenta_wool
-light_blue_wool
-yellow_wool
-lime_wool
-pink_wool
-gray_wool
-light_gray_wool
-cyan_wool
-purple_wool
-blue_wool
-brown_wool
-green_wool
-red_wool
-black_wool
+-------------------------------------------
+Source installation information for modders
+-------------------------------------------
+This code follows the Minecraft Forge installation methodology. It will apply
+some small patches to the vanilla MCP source code, giving you and it access 
+to some of the data and functions you need to build a successful mod.
+
+Note also that the patches are built against "unrenamed" MCP source code (aka
+srgnames) - this means that you will not be able to read them directly against
+normal code.
+
+Source pack installation information:
+
+Standalone source installation
+==============================
+
+See the Forge Documentation online for more detailed instructions:
+http://mcforge.readthedocs.io/en/latest/gettingstarted/
+
+Step 1: Open your command-line and browse to the folder where you extracted the zip file.
+
+Step 2: Once you have a command window up in the folder that the downloaded material was placed, type:
+
+Windows: "gradlew setupDecompWorkspace"
+Linux/Mac OS: "./gradlew setupDecompWorkspace"
+
+Step 3: After all that finished, you're left with a choice.
+For eclipse, run "gradlew eclipse" (./gradlew eclipse if you are on Mac/Linux)
+
+If you prefer to use IntelliJ, steps are a little different.
+1. Open IDEA, and import project.
+2. Select your build.gradle file and have it import.
+3. Once it's finished you must close IntelliJ and run the following command:
+
+"gradlew genIntellijRuns" (./gradlew genIntellijRuns if you are on Mac/Linux)
+
+Step 4: The final step is to open Eclipse and switch your workspace to /eclipse/ (if you use IDEA, it should automatically start on your project)
+
+If at any point you are missing libraries in your IDE, or you've run into problems you can run "gradlew --refresh-dependencies" to refresh the local cache. "gradlew clean" to reset everything {this does not affect your code} and then start the processs again.
+
+Should it still not work, 
+Refer to #ForgeGradle on EsperNet for more information about the gradle environment.
+
+Tip:
+If you do not care about seeing Minecraft's source code you can replace "setupDecompWorkspace" with one of the following:
+"setupDevWorkspace": Will patch, deobfuscate, and gather required assets to run minecraft, but will not generate human readable source code.
+"setupCIWorkspace": Same as Dev but will not download any assets. This is useful in build servers as it is the fastest because it does the least work.
+
+Tip:
+When using Decomp workspace, the Minecraft source code is NOT added to your workspace in a editable way. Minecraft is treated like a normal Library. Sources are there for documentation and research purposes and usually can be accessed under the 'referenced libraries' section of your IDE.
+
+Forge source installation
+=========================
+MinecraftForge ships with this code and installs it as part of the forge
+installation process, no further action is required on your part.
+
+LexManos' Install Video
+=======================
+https://www.youtube.com/watch?v=8VEdtQLuLO0&feature=youtu.be
+
+For more details update more often refer to the Forge Forums:
+http://www.minecraftforge.net/forum/index.php/topic,14048.0.html
